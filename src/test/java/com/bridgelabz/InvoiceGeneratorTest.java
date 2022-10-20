@@ -38,4 +38,22 @@ public class InvoiceGeneratorTest {
         Assert.assertEquals(40, totalFare, 0.0);
         Assert.assertEquals(20, avgFare, 0.0);
     }
+
+    @Test
+    public void givenUserId_ShouldReturnUserRideDetails(){
+        User[] users = {new User(1), new User(2)};
+        users[0].addRideToList(new Ride(3,2));
+        users[0].addRideToList(new Ride(4,5));
+        users[1].addRideToList(new Ride(3,2));
+        int idToSearchFor=1;
+        for(User user:users){
+            Assert.assertEquals(idToSearchFor,user.getUserId());
+            if(user.getUserId()==idToSearchFor){
+                System.out.println(user.getUserId()+"\n"+user.getRideList());
+            }
+            break;
+        }
+
+
+    }
 }
