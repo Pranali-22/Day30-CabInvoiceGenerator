@@ -19,4 +19,17 @@ public class InvoiceGenerator {
 
         return totalFare;
     }
+
+    public double calculateAverageFare(int numOfRides, double totalFare){
+        double averageFare = totalFare/numOfRides;
+        return averageFare;
+    }
+
+    public Object[] getRideDetails(Ride[] rides){
+        Object[] temp = new Object[3];
+        temp[0] = rides.length;
+        temp[1] = this.calculateFare(rides);
+        temp[2] = this.calculateAverageFare((Integer) temp[0], (Double)temp[1]);
+        return temp;
+    }
 }
