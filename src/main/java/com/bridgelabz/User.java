@@ -1,7 +1,6 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
-
 public class User {
     private int userId;
     ArrayList<Ride> rideList = new ArrayList<Ride>();

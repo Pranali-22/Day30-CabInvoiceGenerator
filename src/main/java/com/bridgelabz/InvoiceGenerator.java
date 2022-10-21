@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class InvoiceGenerator {
     public static final double COST_PER_KM = 10;
     public static final int COST_PER_Min = 1;
